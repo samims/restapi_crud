@@ -35,7 +35,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleWare',
+    'corsheaders.middleware.CorsMiddleware',  # new
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -163,7 +163,6 @@ JWT_AUTH = {
     'JWT_AUTH_COOKIE': None,
 
 }
-
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:3000'

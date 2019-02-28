@@ -19,7 +19,9 @@ class PostSerializer(serializers.ModelSerializer):
 
     def get_author(self, obj):
         request = self.context['request']
-        email = request.user.email
+        email = ''
+        if request.method == "POST":
+            email = request.user.email
         return email
 
     def create(self, validated_data):
