@@ -7,7 +7,7 @@ app_name = 'users'
 
 urlpatterns = [
     path('api-token-auth/', CustomObtainJSONWebtoken.as_view(), name='token_obtain_pair'),
-    path('api-token-refresh', RefreshJSONWebToken.as_view(),
+    path('api-token-refresh/', RefreshJSONWebToken.as_view(),
          name='token_refresh'),
     path('api-token-verify/', VerifyJSONWebToken.as_view()),
 ]
