@@ -6,7 +6,7 @@ from .models import CustomUser
 
 
 class CustomUserAdmin(UserAdmin):
-    add_form = CustomUserChangeForm
+    add_form = CustomUserCreationForm
     form = CustomUserChangeForm
     model = CustomUser
 

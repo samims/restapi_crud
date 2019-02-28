@@ -7,7 +7,7 @@ User = get_user_model()
 class Post(models.Model):
     title = models.CharField(max_length=30, null=True)
     content = models.TextField(blank=False, null=True)
-    author = models.OneToOneField(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class Comment(models.Model):
